@@ -1,0 +1,73 @@
+\chapter{Combinaciones Simples}
+
+\begin{ejemplo}
+El Club de matemáticas consta de 4 participantes y se quiere elegir un grupo de 2 personas para que vayan a competir a unas Olimpiadas. ¿De cuántas maneras se puede elegir este grupo?
+\end{ejemplo}
+
+\textit{Solución.} Digamos que estas personas se llaman Aleja, Bob, Carlos y Daniel. \textit{HACER} un diagrama de árbol para ver todas las parejas posibles. Usando el Principio de Multiplicación también podemos contar las formas de armar una fila con 2 personas, pues hay 4 opciones para elegir una persona y 3 para elegir la otra. Es decir que nos quedan 12 parejas. Que son las del diagrama de árbol (\textit{MOSTRAR}). Pero debemos fijarnos que la pareja de \textit{Aleja y Bob} (\textit{SEÑALAR}) es la misma pareja \textit{Bob y Aleja} (\textit{SEÑALAR}) y la pareja \textit{Bob y Daniel} (\textit{SEÑALAR}) es la misma pareja de \textit{Daniel y Bob}(\textit{SEÑALAR}). Así que debemos eliminar estas parejas repetidas. Es decir, del total debemos eliminar la mitad porque estoy contando 2 veces las mismas cosas (\textit{SEÑALAR} con el mismo color las iguales). Así que habrían $\frac{12}{2}=6$ grupos distintos.
+
+\begin{ejemplo}
+Si ahora fueran 5 integrantes en el Club llamados Ana (A), Beto (B), Carlos (C), Daniel (D) y Elisa (E) y se quiere llevar un grupo de 3 a la Olimpiada. ¿De cuántas maneras se pueden elegir estos 3 integrantes?
+\label{integrantesclubcombinaciones}
+\end{ejemplo}
+
+\textit{Solución. }Supongamos que para ir al museo haremos una fila con los 3 integrantes antes de salir a la Olimpiada. Usando el Principio de Multiplicación habrían $5\times 4\times 3=60$ formas de hacerlo. (\textit{HACER} la lista de los 60 usando el diagrama de árbol). Pero es lo mismo la fila con A-B-C que la fila A-C-B, B-A-C, B-C-A, C-A-B, C-B-A. Es decir, que cada fila de 3 personas lo estoy contando 6 veces. (\textit{SEÑALAR} los que son iguales con el mismo color). Por tanto, la cantidad de grupos distintos de 3 integrantes del club que se pueden elegir de los 5 integrantes es $\frac{60}{6}=10$.
+
+\begin{defi}{Combinación.\\}
+En general, si se tiene un grupo con $n$ elementos y se quieren elegir $k$ de ellos. Esto se puede hacer de la siguiente cantidad de maneras $$\frac{n\cdot(n-1)\cdots (n-k+1)}{k!},$$ El siguiente número también es conocido como \textbf{n combinado k} y se denota de la siguiente manera $$ \binom{n}{k}=\frac{n\cdot(n-1)\cdots (n-k+1)}{k!}$$
+\label{Combinaciondefi}
+\end{defi}
+
+Si ahora miramos nuevamente el ejemplo \ref{integrantesclubcombinaciones}. Se debían elegir 3 integrantes de un grupo de 5. Y por la definición \ref{Combinaciondefi}, la cantidad de formas que esto puede hacerse es 
+\begin{equation*}
+    \begin{split}
+        \binom{5}{3} & = \frac{5\cdot 4\cdot 3}{3!}\\
+                     & = \frac{5\cdot 4\cdot 3}{3\cdot 2\cdot 1}\\
+                     & = 10.
+    \end{split}
+\end{equation*}
+
+\begin{ejemplo}
+Sea $X=\{ a,e,i,o,u \}$ el conjunto de las vocales. Escribir todos los subconjuntos de $X$ con 
+    \begin{enumerate}[label=\Roman* )]
+        \item 0 elementos.
+        \item 1 elementos.
+        \item 2 elementos.
+        \item 3 elementos.
+        \item 4 elementos.
+        \item 5 elementos.
+    \end{enumerate}
+\end{ejemplo}
+\vspace{0.3cm}
+
+\textit{Solución. }\\
+
+    \begin{itemize}
+        \item Con 0 elementos hay 1 subconjunto, que es el que no tiene nada, el conjunto vacío.
+        \item Con 1 elemento están los subconjuntos $\{ a\},\{ e\},\{ i\},\{ o\},\{ u\}$.
+            Es decir, 5 subconjuntos distintos. 
+        \item Con 2 elementos están $\{ a,e\},\{ a,i\},\{ a,o\},\{ a,u\},\{ e,i\},\{ e,o\},\{ e,u\},\{ i,o\},\{ i,u\},\{ o,u\}$. Es decir, 10 subconjuntos distintos. 
+        \item Con 3 elementos están los siguientes 
+                \vspace{2cm}
+
+                    (***subconjuntos con 3***)
+
+                \vspace{2cm}
+        \item Con 4 elementos están los siguientes 
+                \vspace{2cm}
+
+                    (***subconjuntos con 4***)
+
+                \vspace{2cm}
+        \item Con 5 elementos sería  
+                
+    \end{itemize}
+    
+\section{Ejercicios de Combinaciones Simples}
+\begin{enumerate}
+    \item Un equipo de fútbol está confirmado por 11 jugadores. Un ojeador del Barcelona ha decidido llevarse a 4 jugadores a España. ¿De cuántas maneras distintas puede elegir a estos 4 jugadores?
+    \item ¿Cuántos números distintos de cinco cifras se pueden formar usando tres unos y dos cuatros?
+    \item **20**
+    \item ***21***
+    \item 
+\end{enumerate}
