@@ -1,0 +1,177 @@
+%\documentclass[a4paper,12pt]{book}
+\documentclass[letterpaper,11pt,oneside]{book}
+\usepackage[lmargin=2.5cm,
+rmargin=2.5cm,top=2.7cm,bottom=3.3cm]{geometry}
+
+\usepackage[spanish]{babel} 
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{enumitem}
+\usepackage{pdfpages}
+
+\usepackage{cancel}
+\usepackage[most]{tcolorbox}
+\usepackage{multicol}
+
+\usepackage{pgf,tikz,pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+%\usepackage{fontspec}
+
+\usepackage{gensymb}
+\usepackage{hyperref}
+%\usepackage[bookmarksnumbered=true]{hyperref}
+\usepackage{bookmark,blindtext}
+\usepackage{float}
+\usepackage{tikz}
+%\usepackage[spanish,es-noshorthands]{babel}
+\usepackage{xcolor}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+%\usepackage[shortlabels]{enumitem}
+%\usepackage{multicol}
+%\usepackage{pdfpages}
+%\usepackage[centering,text ={18 cm ,22 cm } , showframe = false]{geometry}
+
+\usepackage{xparse} % paquete para hacer entornos con p a r m e t r o s
+
+%Para que salgan las subsubsection en el indice
+\setcounter{tocdepth}{4} 
+\setcounter{secnumdepth}{4}
+
+%para que salgan numeros en booksmarks pdf
+\bookmarksetup{
+	numbered,
+	addtohook={%
+		\ifnum\bookmarkget{level}>1 %
+		\bookmarksetup{numbered=false}%
+		\fi
+	},
+}
+
+\newtheoremstyle{break}
+{\topsep}{\topsep}%
+{\itshape}{}%
+{\bfseries}{}%
+{\newline}{}%
+
+\theoremstyle{definition}
+\newtheorem{exer}{$\textit{\textbf{Ejercicio}}$}[section]
+\newtheorem{exers}{Ejercicios}[chapter]
+\newtheorem{ejemplo}{{ Ejemplo }}[section]
+
+%\theoremstyle{theorem}
+\newtheorem{theorem}{{ Teorema }}[chapter]
+\newtheorem{prop}{{ Propiedad }}[chapter]
+\newtheorem{defi}{{\underline{\bf Definición}}}[chapter]
+\newtheorem{problem}{\textbf{\textit Problema}}[chapter]
+\theoremstyle{remark}
+\newtheorem{act}{ \textbf{Actividad} }[section]
+
+
+\newcommand{\saleASolution}[1]{\begin{flushright} \hyperlink{#1}{\faLightbulbO} \end{flushright}}
+\newcommand{\entraASolution}[1]{\hypertarget{#1}{}}
+
+\newcommand{\saleAEjercicios}[1]{\begin{flushright} \hyperlink{#1}{\faEdit} \end{flushright}}
+\newcommand{\entraAEjercicios}[1]{\hypertarget{#1}{}}
+
+    
+
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+\begin{Huge}
+\textsc{Notas de un curso de Olimpiadas}
+\end{Huge}
+\end{center}
+\end{titlepage}
+
+\newpage
+$\ $
+\thispagestyle{empty} % para que no se numere esta pagina
+
+\chapter*{}
+\pagenumbering{Roman} % para comenzar la numeracion de paginas en numeros romanos
+\begin{flushright}
+\textit{Grupo de Educación y Formación Matemática}
+\end{flushright}
+
+\newpage
+$\ $
+\thispagestyle{empty}
+
+
+\tableofcontents
+
+\newpage
+$\ $
+\thispagestyle{empty} % para que no se numere esta pagina
+
+\pagenumbering{arabic} % para empezar la numeración con números
+ 
+\part{Conteo y probabilidad}\label{cap.conteo y probabilidad}
+	%\input{Combinatoria/Combinaciones_Simples/combinaciones_simples.tex}
+	\input{Combinatoria/CombinatoriaAvanzado.tex}
+
+\part{Geometría}\label{capGeometria}
+	\input{Geometria/GeometriaAvanzado.tex}	
+	%\input{Geometria/semejanza/semejanza_AV.tex}
+	%\input{Geometria/Angulos_en_circulos/circulos_y_angulos.tex}
+	
+
+\part{Teoría de Números}
+	\input{TN/TNAvanzado.tex}
+	%\input{TN/Factorizacion_prima_avanzado/factorizacion_prima_avanzado.tex}
+	%\input{TN/Divisores/divisores.tex}
+	
+\part{Álgebra}\label{algebra}
+	\input{Algebra/AlgebraAvanzado.tex}
+	%\input{Algebra/Ecuaciones_lineales_una_variable/Avanzado_Revision_Ecuaciones_lineales_una_variable.tex}
+	
+	%\input{Algebra/mas_variables/cam_variables_AV.tex}
+	
+	%\input{Algebra/EcuacionesLinealesMultivariables/EcuacionesLinealesMultivariables.tex}
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+%-----------------                            SOLUCIONES                       ----------------------
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+\part{Soluciones}
+\input{avanzado_soluciones.tex}
+%\chapter{Algebra}	
+%\input{Algebra/Solucion_algebra.tex}
+
+		
+\begin{thebibliography}{9}
+	\bibitem{ICP_Aops}
+	David Patrick. \textit{Introduction to Counting and Probability}. Aops, 2005.
+	
+	\bibitem{Aops_Geometria}
+	\textit{Introduction to Geometry (AOPS)}
+	
+	\bibitem{Aops_algebra}
+	\textit{Introduction to Algebra (AOPS)}
+	
+	\bibitem{Contagem_e_probabilidade}
+	Paulo Cezar Pinto Carvalho. \textit{Métodos de Contagem e Probabilidade}, IMPA, OBMEP.
+	
+	\bibitem{clemens}
+	Standley R. Clemens y Phares G O'Daffer \textit{Geometría}, Addison Wesley Longman
+	
+	\bibitem{POTI}
+	Programa Olímpico de Treinamento
+	
+	\bibitem{Aops_TN}
+	\textit{Introduction to Number Thoery (AOPS)}
+	
+	\bibitem{Dimensions_Math_7A}
+	Dimensions Math 7A \textit{a Singapore Math Program} 
+\end{thebibliography}
+
+
+
+\end{document}

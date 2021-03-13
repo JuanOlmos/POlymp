@@ -1,0 +1,203 @@
+\documentclass[letterpaper,11pt,oneside]{book}
+\usepackage[lmargin=2.5cm,
+rmargin=2.5cm,top=2.7cm,bottom=3.3cm]{geometry}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel} 
+
+\usepackage{tikz,lipsum,lmodern}
+\usepackage[most]{tcolorbox}
+
+\usepackage{cancel}
+
+
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{enumitem}
+\usepackage{pdfpages}
+
+\usepackage{pgf,tikz,pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+%\usepackage{fontspec}
+
+\usepackage{xcolor}
+\usepackage{gensymb}
+\usepackage{hyperref}
+\usepackage{bookmark,blindtext}
+\usepackage{float}
+\usepackage{tikz}
+%\usepackage[spanish,es-noshorthands]{babel}
+\usepackage{xcolor}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+%\usepackage[shortlabels]{enumitem}
+\usepackage{multicol}
+%\usepackage{pdfpages}
+%\usepackage[centering,text ={18 cm ,22 cm } , showframe = false]{geometry}
+
+\usepackage{blindtext,hyperref} %Proteger y hacer crossreference
+\usepackage{fontawesome} %Iconos
+
+%Para que salgan las subsubsection en el indice
+\setcounter{tocdepth}{4} 
+\setcounter{secnumdepth}{4}
+
+%para que salgan numeros en booksmarks pdf
+\bookmarksetup{
+	numbered,
+	addtohook={%
+		\ifnum\bookmarkget{level}>1 %
+		\bookmarksetup{numbered=false}%
+		\fi
+	},
+}
+
+%\usepackage{fixltx2e}
+
+\usepackage{xparse} % paquete para hacer entornos con p a r m e t r o s
+
+\newtheoremstyle{break}
+{\topsep}{\topsep}%
+{\itshape}{}%
+{\bfseries}{}%
+{\newline}{}%
+
+\theoremstyle{definition}
+\newtheorem{exer}{$\textit{\textbf{Ejercicio}}$}[chapter]
+\newtheorem{exers}{\textbf{Ejercicios}}[chapter]
+\newtheorem{ejemplo}{{ Ejemplo }}[chapter]
+
+%\theoremstyle{theorem}
+\newtheorem{theorem}{{ Teorema }}[chapter]
+\newtheorem{prop}{{ Propiedad }}[chapter]
+\newtheorem{defi}{{\underline{\textbf Definici\'on}}}[chapter]
+\newtheorem{problem}{\textbf{\textit Problema}}[chapter]
+\theoremstyle{remark}
+\newtheorem{act}{ \textbf{Actividad} }[section]
+\newtheorem{act_clase}{ \textbf{Actividad de Clase} }[section]
+
+
+\newcommand{\saleASolution}[1]{\begin{flushright} \hyperlink{#1}{\faLightbulbO} \end{flushright}}
+\newcommand{\entraASolution}[1]{\hypertarget{#1}{}}
+
+\newcommand{\saleAEjercicios}[1]{\begin{flushright} \hyperlink{#1}{\faEdit} \end{flushright}}
+\newcommand{\entraAEjercicios}[1]{\hypertarget{#1}{}}
+
+
+\begin{document}
+	
+	\begin{titlepage}
+		\begin{center}
+			\begin{Huge}
+				\textsc{Notas de un curso de Olimpiadas}
+			\end{Huge}
+		\end{center}
+	\end{titlepage}
+	
+	%\newpage
+	%$\ $
+	\thispagestyle{empty} % para que no se numere esta pagina
+	
+	\chapter*{}
+	\pagenumbering{Roman} % para comenzar la numeracion de paginas en numeros romanos
+	\begin{flushright}
+\textit{Grupo de Educación y Formación Matemática}
+	\end{flushright}
+	
+	%\newpage
+	%$\ $
+	%\thispagestyle{empty}
+	
+	
+	\tableofcontents
+	
+	%\newpage
+	%$\ $
+	\thispagestyle{empty} % para que no se numere esta pagina
+	
+	\pagenumbering{arabic} % para empezar la numeraci�n con n�meros	
+	
+	\part{Combinatoria}\label{cap_conteo_y_probabilidad}
+	%\input{Combinatoria/contando_listas_de_numeros/contando_listas_de_numeros.tex}
+	\input{Combinatoria/CombinatoriaMedio.tex}
+	
+	%\input{Combinatoria/Principio_de_multiplicacion/cap_principio_multiplicacion.tex}	
+	%\input{Combinatoria/inclusion_y_exclusion/cap_inclusion_exclusion.tex}
+	
+	
+	\part{Geometr\'ia}
+	\input{Geometria/GeometriaMedio}
+	
+	%\part{Geometr\'ia}\label{capGeometria}
+	%\input{Geometria/Introduccion/introduccion_medio}
+	%{\inputencoding{latin1}\input{Geometria/Angulos/angulos.tex}} 	
+	%\input{Geometria/Angulos/angulos.tex}
+	%\input{Geometria/Congruencia_de_triangulos/cap_congruencia_de_triangulos.tex}
+	
+	\part{Teor\'ia de N\'umeros}
+	\input{TN/TNMedio.tex}
+	%\input{TN/Sumas/sumas.tex}
+	%\input{TN/Multiplos_Divisores_MCMyMCD.tex}
+	
+	\part{\'Algebra}\label{part:algebra}
+	%\inputencoding{latin1}\input{Algebra/enteros_y_reglas_algebraicas/reglas_aritmeticas.tex}}
+	\input{Algebra/AlgebraMedio.tex}
+	%\input{Algebra/enteros_y_reglas_algebraicas/reglas_aritmeticas.tex}
+	%\input{Algebra/x_es_la_clave_intro_variable/x_es_la_clave_intro_variable.tex}
+	
+	%\section{Introducci\'on}
+	%\input{Algebra/Introduccion/Cap1_Cap2_AOPS.tex}		
+	
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+%-----------------                            SOLUCIONES                       ----------------------
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+	\part{Soluciones}
+	\input{Medio_Soluciones.tex}
+	%\chapter{Algebra}	
+	%\input{Algebra/Solucion_algebra.tex}
+		
+	\begin{thebibliography}{9}
+		\bibitem{ICP_Aops}
+		David Patrick. \textit{Introduction to Counting and Probability}. Aops, 2005.
+		
+		\bibitem{Contagem_e_probabilidade}
+		Paulo Cezar Pinto Carvalho. \textit{M\'etodos de Contagem e Probabilidade}, IMPA, OBMEP.
+		
+		\bibitem{Aops_Geometria}
+		\textit{Introduction to Geometry} \textbf{NO SE QUE MAS}
+		
+		\bibitem{Aops_algebra}
+		The Art of Problem Solving:\textit{ Introduction to Algebra}. Richard Rusczyk.
+		
+		\bibitem{clemens}
+		Standley R. Clemens y Phares G O'Daffer \textit{Geometr\'ia}, Addison Wesley Longman
+		
+		\bibitem{Udea_geometria}
+		Red Matem\'atica Antioquia \textit{Geometr\'ia Euclideana}
+		
+		\bibitem{Dimensions_Math_7A}
+		Dimensions Math 7A \textit{a Singapore Math Program} 
+		
+		\bibitem{Dimensions_Math_6A}
+		Dimensions Math 6A \textit{a Singapore Math Program} 
+		
+		\bibitem{Dimensions_Math_6B}
+		Dimensions Math 6B \textit{a Singapore Math Program} 
+		
+		\bibitem{creative_problem_solvind_NEGRO}
+		Creative Problem Solving in School Mathematics, \textit{Dr. George Lenchner}. 
+		
+		\bibitem{Aops_intro_counting_prob}
+		Introduction to Counting and Probability, Aops.
+		
+	\end{thebibliography}
+	
+
+		
+		
+\end{document}
