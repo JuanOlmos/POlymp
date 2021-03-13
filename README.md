@@ -1,2 +1,2 @@
-# POlymp
-Tex Olymp
+# Programa de Olimpiadas
+Git de Prueba
