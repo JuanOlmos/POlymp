@@ -8,3 +8,5 @@ avanzado.aux
 *.gz
 
 *.aux
+
+*.out
