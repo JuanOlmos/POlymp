@@ -1,0 +1,115 @@
+\documentclass[letterpaper,11pt,oneside]{book}
+\usepackage[lmargin=2.5cm,
+rmargin=2.5cm,top=2.7cm,bottom=3.3cm]{geometry}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel} 
+
+\usepackage{tikz,lipsum,lmodern}
+\usepackage[most]{tcolorbox}
+
+\usepackage{cancel}
+
+
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{enumitem}
+\usepackage{pdfpages}
+
+\usepackage{pgf,tikz,pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+%\usepackage{fontspec}
+
+\usepackage{xcolor}
+\usepackage{gensymb}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{tikz}
+%\usepackage[spanish,es-noshorthands]{babel}
+\usepackage{xcolor}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+%\usepackage[shortlabels]{enumitem}
+\usepackage{multicol}
+%\usepackage{pdfpages}
+%\usepackage[centering,text ={18 cm ,22 cm } , showframe = false]{geometry}
+
+\usepackage{xparse} % paquete para hacer entornos con p a r m e t r o s
+
+\newtheoremstyle{break}
+{\topsep}{\topsep}%
+{\itshape}{}%
+{\bfseries}{}%
+{\newline}{}%
+
+\theoremstyle{definition}
+\newtheorem{exer}{$\textit{\textbf{Ejercicio}}$}[section]
+\newtheorem{exers}{Ejercicios}[section]
+\newtheorem{ejemplo}{{ Ejemplo }}[section]
+
+%\theoremstyle{theorem}
+\newtheorem{theorem}{{ Teorema }}[chapter]
+\newtheorem{prop}{{ Propiedad }}[chapter]
+\newtheorem{defi}{{\underline{\textbf Definici\'on}}}[chapter]
+\newtheorem{problem}{\textbf{\textit Problema}}[chapter]
+\theoremstyle{remark}
+\newtheorem{act}{ \textbf{Actividad} }[section]
+\newtheorem{act_clase}{ \textbf{Actividad de Clase} }[section]
+
+
+\begin{document}
+	
+	\begin{titlepage}
+		\begin{center}
+			\begin{Huge}
+				\textsc{Recopilación de pruebas}
+			\end{Huge}
+		\end{center}
+	\end{titlepage}
+	
+	\newpage
+	$\ $
+	\thispagestyle{empty} % para que no se numere esta pagina
+	
+	\chapter*{}
+	\pagenumbering{Roman} % para comenzar la numeracion de paginas en numeros romanos
+	\begin{flushright}
+		\textit{Dedicado a todos aquellos que ven mas all\'a de los n\'umeros}
+	\end{flushright}
+	
+	\newpage
+	$\ $
+	\thispagestyle{empty}
+	
+	
+	\tableofcontents
+	
+	\newpage
+	$\ $
+	\thispagestyle{empty} % para que no se numere esta pagina
+	
+	\pagenumbering{arabic} % para empezar la numeraci�n con n�meros	
+	
+	\chapter{23 de Mayo de 2020}\label{chap:23mayo2020}
+	\input{2020_05_23/23_mayo_2020.tex}
+	
+	\chapter{13 de Junio de 2020}\label{chap:13junio2020}
+	\input{2020_06_13/2020_13_junio_todos_niveles.tex}
+
+	\chapter{15 de Agosto de 2020}\label{chap:15agosto2020}
+	\input{2020_08_15/15_agosto_2020.tex}
+	
+	\chapter{12 de Septiembre de 2020}\label{chap:12septiembre2020}
+	\input{2020_09_12/2020_12_septiembre.tex}
+	
+	\chapter{10 de Octubre  de 2020}\label{chap:10octubre2020}
+	\input{2020_10_10/2020_10_octubre.tex}
+	
+	\chapter{31 de Octubre  de 2020}\label{chap:2020_10_31}
+	\input{2020_10_31/2020_10_31.tex}
+		
+		
+\end{document}
